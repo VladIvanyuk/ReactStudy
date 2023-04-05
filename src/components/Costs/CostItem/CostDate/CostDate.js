@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./CostDate.module.css";
 
 export const CostDate = (props) => {

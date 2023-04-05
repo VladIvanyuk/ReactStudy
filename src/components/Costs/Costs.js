@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Costs.module.css";
 import { CostItem } from "./CostItem";
 import { Card } from "../Card";

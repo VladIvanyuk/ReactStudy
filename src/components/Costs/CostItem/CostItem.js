@@ -1,4 +1,3 @@
-import React from "react";
 import { CostDate } from "./CostDate/CostDate";
 import styles from "./CostItem.module.css";
 import { Card } from "../../Card"
