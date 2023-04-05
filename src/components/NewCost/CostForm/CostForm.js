@@ -1,12 +1,21 @@
 import styles from './CostForm.module.css';
+import { useState } from 'react';
 
 export const CostForm = (props) => {
+
+  const [name, setName] = useState('');
+
+  const nameChangeHandler = (e) => {
+    console.log(e);
+    setName(e.target.value);
+  };
+
   return (
     <form>
       <div className={styles.controls}>
         <div className={styles.control}>
           <label>Название</label>
-          <input type="text" />
+          <input type="text" onChange={nameChangeHandler}/>
         </div>
         <div className={styles.control}>
           <label>Сумма</label>
