@@ -1,15 +1,16 @@
 import React from "react";
 import { CostDate } from "./CostDate/CostDate";
 import styles from "./CostItem.module.css";
+import { Card } from "../../Card"
 
 export const CostItem = (props) => {
   return (
-    <div className={styles["cost-item"]}>
+    <Card className={styles.costItem}>
       <CostDate date={props.date} />
-      <div className={styles["cost-item__description"]}>
+      <div className={styles.description}>
         <h2>{props.description}</h2>
-        <div className={styles["cost-item__price"]}>${props.amount}</div>
+        <div className={styles.price}>${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 };
