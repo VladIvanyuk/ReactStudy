@@ -1,11 +1,21 @@
 import styles from "./Costs.module.css";
 import { CostItem } from "./CostItem";
 import { Card } from "../Card";
+import { CostFilter } from "./CostFilter/CostFilter";
+import { useState } from "react";
 
 export const Costs = (props) => {
+  const [year, setYear] = useState('');
+
   const costs = props.costs;
+
+  const changeYearHandler = (year) => {
+    setYear(year);
+  };
+
   return (
     <Card className={styles.costs}>
+      <CostFilter year={year} onChangeYear={changeYearHandler}/>
       <CostItem
         date={costs[0].date}
         description={costs[0].description}
