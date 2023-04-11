@@ -7,49 +7,27 @@ export const CostForm = (props) => {
   const [inputAmount, setInputAmount] = useState('');
   const [inputDate, setInputDate] = useState('');
 
-  // const [userInput, setUserInput] = useState({
-  //   name: '',
-  //   amount: '',
-  //   date: '',
-  // })
-
   const nameChangeHandler = (e) => {
     setInputName(e.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   name: e.target.value,
-    // })
-    // setUserInput((prev) => {
-    //   return {
-    //     ...prev,
-    //     name: e.target.value
-    //   }
-    // })
   };
 
   const amountChangeHandler = (e) => {
     setInputAmount(e.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   amount: e.target.value,
-    // })
   };
 
   const dateChangeHandler = (e) => {
     setInputDate(e.target.value);
-    // setUserInput({
-    //   ...userInput,
-    //   date: e.target.value,
-    // })
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
     const costData = {
-      name: inputName,
+      description: inputName,
       amount: inputAmount,
       date: new Date(inputDate)
     }
+
+    props.onSaveCostData(costData);
 
     setInputName('');
     setInputAmount('');
