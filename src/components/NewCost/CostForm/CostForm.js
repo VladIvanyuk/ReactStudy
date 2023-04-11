@@ -27,6 +27,7 @@ export const CostForm = (props) => {
       date: new Date(inputDate)
     }
 
+    // прокидываем дату в NewCost
     props.onSaveCostData(costData);
 
     setInputName('');

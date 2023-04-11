@@ -4,19 +4,19 @@ import { NewCost } from "./components/NewCost/NewCost";
 
 const INITIAL_COSTS = [
   {
-    date: new Date(2023, 4, 3),
+    date: new Date(2019, 4, 3),
     description: "Холодильник",
     amount: "999.99",
     id: "c1",
   },
   {
-    date: new Date(2023, 8, 14),
+    date: new Date(2020, 8, 14),
     description: "Телевизор",
     amount: "142.99",
     id: "c2",
   },
   {
-    date: new Date(2023, 11, 11),
+    date: new Date(2021, 11, 11),
     description: "Телефон",
     amount: "88.99",
     id: "c3",

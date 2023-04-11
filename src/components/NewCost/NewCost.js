@@ -8,7 +8,8 @@ export const NewCost = (props) => {
       ...inputCostData,
       id: Math.random().toString()
     }
-    console.log(costData)
+    
+    // прокидываем дату из CostForm в App
     props.onAddCost(costData);
   }
 

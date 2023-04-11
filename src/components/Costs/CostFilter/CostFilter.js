@@ -2,6 +2,7 @@ import styles from "./CostFilter.module.css";
 
 export const CostFilter = (props) => {
   const yearChangeHandler = (event) => {
+    // прокидываем год в Costs
     props.onChangeYear(event.target.value);
   };
 
