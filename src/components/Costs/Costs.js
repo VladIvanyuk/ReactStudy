@@ -3,6 +3,7 @@ import { Card } from "../Card";
 import { CostFilter } from "./CostFilter/CostFilter";
 import { useState } from "react";
 import { CostsList } from "./CostsList";
+import { CostsDiagram } from "./CostsDiagram/CostsDiagram";
 
 export const Costs = (props) => {
   const [year, setYear] = useState(2021);
@@ -17,6 +18,7 @@ export const Costs = (props) => {
   return (
     <Card className={styles.costs}>
       <CostFilter year={year} onChangeYear={changeYearHandler} />
+      <CostsDiagram costs={filteredCosts}/>
       <CostsList year={year} costs={filteredCosts}/>
     </Card>
   );
