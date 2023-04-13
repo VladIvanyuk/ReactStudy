@@ -6,6 +6,10 @@
   text-align: left;
 }
 
+.buttonsContainer {
+  display: flex;
+}
+
 .control label {
   font-weight: bold;
   margin-bottom: 0.5rem;
